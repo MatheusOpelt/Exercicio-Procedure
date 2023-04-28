@@ -57,41 +57,6 @@ BEGIN
     VALUES (@matricula, @curso, @materia, @professor, @perletivo)
 END
 
--- Procedure para ajustar a nota final e nota de exame de um aluno:
-
--- CREATE PROCEDURE ajusta_notas
---     @matricula INT,
---     @curso CHAR(3),
---     @materia CHAR(3),
---     @professor INT,
---     @mediafinal FLOAT,
---     @notaexame FLOAT
--- AS
--- BEGIN
---     UPDATE MATRICULA
---     SET MEDIAFINAL = @mediafinal, NOTAEXAME = @notaexame
---     WHERE MATRICULA = @matricula AND CURSO = @curso AND MATERIA = @materia AND PROFESSOR = @professor
--- END
--- Procedure para calcular a média final e resultado de um aluno:
---
--- sql
--- Copy code
--- CREATE PROCEDURE calcula_media_resultado
---     @matricula INT,
---     @curso CHAR(3),
---     @materia CHAR(3),
---     @professor INT
--- AS
--- BEGIN
---     DECLARE @n1 FLOAT, @n2 FLOAT, @n3 FLOAT, @n4 FLOAT, @totalpontos FLOAT, @media FLOAT, @f1 INT, @f2 INT, @f3 INT, @f4 INT, @totalfaltas INT, @percfreq FLOAT, @mediafinal FLOAT, @notaexame FLOAT, @resultado VARCHAR(20)
---
---     SELECT @n1 = N1, @n2 = N2, @n3 = N3, @n4 = N4, @f1 = F1, @f2 = F2, @f3 = F3, @f4 = F4
---     FROM MATRICULA
---     WHERE MATRICULA = @matricula AND CURSO = @curso AND MATERIA = @materia AND PROFESSOR = @professor
---
---     SET @totalpontos = ISNULL(@n1
-
-
 
 CREATE OR ALTER PROCEDURE sp_CadastraNotas
 	(
